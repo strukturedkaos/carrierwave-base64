@@ -23,7 +23,7 @@ module Carrierwave
       private
 
       def get_video_format(description)
-        regex = /\Adata:video\/([a-z]+);base64\z/i
+        regex = /\Adata:video\/(\w+);base64\z/i
         regex.match(description).try(:[], 1)
       end
     end
